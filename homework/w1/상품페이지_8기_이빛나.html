@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <title>스타벅스 텀블러</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Inconsolata&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+    <script>
+        function up(){
+            alert("주문이 완료되었습니다.");
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'Inconsolata', monospace;
+            font-family: 'Inconsolata', monospace;
+            font-family: 'Nanum Pen Script', cursive;
+            font-family: 'Gaegu', cursive;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .wrap {
+            width: 90%;
+            margin: auto;
+            padding: 20px 100px;
+        }
+
+        .wrap>img {
+            margin:auto;
+            display:block;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .list {
+            margin: 20px 0px;
+        }
+
+        .title {
+            display: inline;
+        }
+
+        .title.price {
+            font-size: 15px;
+            margin-left: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .list>p {
+            margin: 10px 0px;
+        }
+
+        form {
+            margin-top: 15px;
+        }
+
+        #button {
+            width: 100%;
+            text-align: center;
+            margin: 30px 0px;
+        }
+
+        button {
+            width: 40%;
+            height: 60px;
+            font-size: 30px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <img src='http://img.danawa.com/prod_img/500000/415/849/img/6849415_1.jpg?shrink=500:500&_v=20181213122006' alt="텀블러" />
+        <div class="list">
+            <h1 class="title">[스타벅스 SS 블랙 헤리티지 뉴턴 텀블러 355ml]</h1>
+            <p class="title price">가격 : 25,000원 / 개 </p>
+            <p>절제된 블랙에 골드색의 헤리티지 로고를 멋스럽게 디자인 한 뉴턴 텀블러입니다.
+                사각 손잡이를 매치하여 시크한 느낌을 주며
+                리드 상단에 사이렌 로고를 음각으로 새겨 고급스러움을 더했습니다.</p>
+        </div>
+        <div class="list">
+            <h1 class="title">주문하기</h1>
+            <form>
+                <p>
+                    <label for="customer_name">주문자 이름 : </label>
+                    <input type="text" id="customer_name" />
+                </p>
+                <p>
+                    <label for="count">수량 : </label>
+                    <select id="count">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="address">주소 : </label>
+                    <input type="text" id="address" />
+                </p>
+                <p>
+                    <label for="contact">전화번호 : </label>
+                    <input type="text" id="contact" />
+                </p>
+            </form>
+        </div>
+        <div id="button">
+            <button onclick="up()" type="button" class="btn btn-primary">주문하기</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

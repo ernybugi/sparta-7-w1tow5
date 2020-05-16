@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title>상품페이지</title>
+
+    <style>
+        body {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 200px;
+        }
+
+        .product_image {
+            width: 500px;
+            height: auto;
+            border: solid;
+            margin: 10px;
+        }
+
+        .price {
+            font-size: small;
+        }
+
+        .terms {
+            margin-top: 50px;
+        }
+    </style>
+
+    <script>
+        function button_click() {
+            alert("주문이 정상적으로 접수되었습니다.");
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <img class="product_image" src="https://image.zdnet.co.kr/2013/11/04/czaD8pqbEJkRjYit7IUE.jpg">
+    </div>
+
+    <div>
+        <H1>비트코인 <span class="price">가격: 12,000,000원 / 개</span></H1>
+        <P>
+            블록체인 기술을 기반으로 만들어진 온라인 암호화폐이다. 중앙은행이 없이 전 세계적 범위에서 P2P 방식으로 개인들 간에 자유롭게 송금 등의 금융거래를 할 수 있게 설계되어 있다.
+        </P>
+        <br>
+    </div>
+
+    <div class="order">
+        <H1>주문하기</H1>
+        <br>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">성</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="ex) HONG"">
+                    </div>
+                    <div class=" form-group col-md-6">
+                    <label for="inputPassword4">이름</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="ex) GILDONG">
+                </div>
+            </div>
+        </form>
+
+        <p>입금할 통화</p>
+        <div class="input-group">
+            <input type="number" class="form-control" id="Quantity" aria-label="number input with dropdown button">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">KRW</button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item" href="#">KRW</button>
+                    <button class="dropdown-item" href="#">USD</button>
+                    <button class="dropdown-item" href="#">EUR</button>
+                </div>
+            </div>
+        </div>
+
+        <P><br>결제 방식</P>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">신용카드</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">계좌이체</label>
+        </div>
+
+        <p class="terms">구매조건 확인 및 결제대행 서비스 약관 동의</p>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                서비스 이용약관 동의
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                개인정보 이용 및 수집 동의
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                개인정보 제공 및 위탁 동의
+            </label>
+        </div>
+
+        <input class="btn btn-primary" type="submit" id="button1" onclick="button_click();" value="제출" style="width:60px; margin-top:20px;/>
+        <script>
+            function button_click() {
+                alert("주문이 정상적으로 접수되었습니다."); } </script>
+    </div>
+
+
+</body>
+
+</html>

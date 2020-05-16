@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>티셔츠 팝니다</title>
+    <!--부트스트랩 가져옴-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
+    <!--css 가져옴-->
+    <link rel="stylesheet" type="text/css" href="8기_장주혁_1주차과제.css">
+
+    <script class="button">
+        function hey() {
+            alert('주문이 완료되었습니다.');
+        }
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://image.msscdn.net/images/goods_img/20160521/357156/357156_1_500.jpg"
+                alt="Card image cap">
+
+        </div>
+
+        <div class="title">흰색 무지티</div>
+        <div class="title2">가격 : 5000원</div>
+
+
+
+
+
+        <div class="noti">여러벌 갖고 있으면 정말 든든한 기본 아이템인 흰색 무지티.</div>
+
+        <div class="order">주문하기</div>
+
+        <div class="input-group1">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">주문자 성함</span>
+            </div>
+            <input type="text" class="form-control">
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">수량</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                </select>
+            </div>
+        </div>
+        <div class="input-group2">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">주소</span>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+        <div class="input-group3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">전화번호</span>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+
+    
+        <button onclick='hey()' type="button" class="btn btn-primary">주문하기</button>
+</body>
+
+</html>
