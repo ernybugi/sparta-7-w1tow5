@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery 연습하고 가기! - 8기 이동현반</title>
+    <!-- JQuery를 import 합니다 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        div.question-box {
+            margin: 10px 0 20px 0;
+        }
+
+        div.question-box>div {
+            margin-top: 30px;
+        }
+
+        
+        div.img-box{
+            height:auto;
+            max-height: 500px;
+            width: auto;
+            max-width: 500px;
+        }
+    </style>
+    ​
+    <script>
+        function q1() {
+            // 1. input-q1의 입력값을 가져온다.
+            let value = $('#input-q1').val();
+            // 2. 만약 입력값이 "개"를 포함하면, 
+            if (value.includes("개") | value.includes("dog") | value.includes("puppy")) {
+                //개 사진 api 불러오기
+                $.ajax({
+                    type: "GET", // GET 방식으로 요청한다.
+                    url: "https://dog.ceo/api/breeds/image/random",
+                    data: {}, // 요청하면서 함께 줄 데이터 (GET 요청시엔 비워두세요)
+                    success: function (response) { // 서버에서 준 결과를 'response'라는 변수에 담음
+                        dog_url=response['message']; // api에 나오는 주소를 'dog_url' 이라는 변수에 담음
+                        $('#img').attr('src',dog_url);
+                    }
+                })
+            }
+
+            // . 만약 입력값이 "고양이"를 포함하면, 
+            else if (value.includes("고양이") | value.includes("cat")) {
+                $.ajax({
+                    type: "GET", // GET 방식으로 요청한다.
+                    url: "https://api.thecatapi.com/v1/images/search",
+                    data: {}, // 요청하면서 함께 줄 데이터 (GET 요청시엔 비워두세요)
+                    success: function (response) { // 서버에서 준 결과를 'response'라는 변수에 담음
+                        cat_url=response[0]['url']; // api에 나오는 주소를 'cat_url' 이라는 변수에 담음
+                        $('#img').attr('src',cat_url);
+                    }
+                })
+            }
+
+            // 4. 위 단어 중 아무것도 포함하지 않으면
+            else {
+                // 4. alert(입력값) 띄우기
+                alert("제대로 입력하세요!!!");
+            }
+        }
+    </script>
+    ​
+</head>
+
+<body>
+    <h1>JQuery+Ajax의 조합을 연습하자!</h1>
+    <hr />
+    <div class="question-box">
+        <h2>고양이 + 개 사진 API를 이용하기</h2>
+        <p>입력창에 한글로 개, 강아지 혹은 dog, puppy 라고 입력하면 강아지 사진을.</p>
+        <p>입력창에 한글로 고양이 혹은 cat이라고 입력하면 고양이 사진을.</p>
+        <p>그 이외의 경우에는 제대로 입력하세요!!! 라고 Alert을!</p>
+        <input id="input-q1" type="text" />
+        <button onclick="q1()">어떤 동물을 볼까?</button>
+        <div class="img-box">
+            <img id="img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+        </div>
+    </div>
+</body>
+
+</html>
